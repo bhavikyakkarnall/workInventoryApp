@@ -1,0 +1,2 @@
+# workInventoryApp
+Stock Management System
