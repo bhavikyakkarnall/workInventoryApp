@@ -1,4 +1,9 @@
 import { useRef, useState } from "react";
+import Form from 'react-bootstrap/Form';
+import InputGroup from 'react-bootstrap/InputGroup';
+import Button from 'react-bootstrap/Button';
+import ButtonGroup from 'react-bootstrap/ButtonGroup';
+import Dropdown from 'react-bootstrap/Dropdown';
 
 export default function ItemsFilter({ statuses, companies, onFilterChange }) {
     const [cs, setCS] = useState("");
@@ -63,12 +68,9 @@ export default function ItemsFilter({ statuses, companies, onFilterChange }) {
     return (
         <>
             <div>
-                <input type="text" ref={csRef}
-                    className="games-search-box"
-                    value={cs}
-                    onChange={(e) => { handleTitleSearch(e) }}
-                    placeholder="Enter a CS">
-                </input>
+                <InputGroup className="mb-3">
+                    <Form.Control type="text" ref={csRef} className="games-search-box" value={cs} onChange={(e) => { handleCSSearch(e)}} placeholder="Enter a CS"/>
+                </InputGroup>
                 <button onClick={() => { removeFilters(); }}>Remove Filters</button>
             </div>
 
@@ -85,6 +87,23 @@ export default function ItemsFilter({ statuses, companies, onFilterChange }) {
                 onChange={(e) => {handleCompanyChange(e)}}>
                     {companyOptionsJsx}
                 </select>
+
+                {/* <Dropdown as={ButtonGroup}>
+                    <Button variant="secondary">Company</Button>
+                    <Dropdown.Toggle split variant="success" id="dropdown-split-basic" />
+
+                    <Dropdown.Menu>
+                        {companyOptionsJsx.map((option, index) => (
+                            <Dropdown.Item 
+                                key={index} 
+                                onClick={() => handleCompanyChange(option.value)}
+                            >
+                                {option.label}
+                            </Dropdown.Item>
+                        ))}
+                    </Dropdown.Menu>
+                </Dropdown> */}
+
             </div>
 
         </>

@@ -1,7 +1,7 @@
 let items = [
     {
       "id": 1,
-      "equipment type": "SEVEN",
+      "equipment_type": "SEVEN",
       "cs": 2840001,
       "status": "Storeroom",
       "company": "HomeSafe",
@@ -15,7 +15,7 @@ let items = [
     },
     {
       "id": 2,
-      "equipment type": "SEVEN",
+      "equipment_type": "SEVEN",
       "cs": 2840002,
       "status": "Storeroom",
       "company": "Security Alert",
@@ -29,7 +29,7 @@ let items = [
     },
     {
       "id": 3,
-      "equipment type": "SEVEN",
+      "equipment_type": "SEVEN",
       "cs": 2840003,
       "status": "Storeroom",
       "company": "ADT Security",
@@ -43,7 +43,7 @@ let items = [
     },
     {
       "id": 4,
-      "equipment type": "SEVEN",
+      "equipment_type": "SEVEN",
       "cs": 2840004,
       "status": "Storeroom",
       "company": "ADT Security",
@@ -57,7 +57,7 @@ let items = [
     },
     {
       "id": 5,
-      "equipment type": "SEVEN",
+      "equipment_type": "SEVEN",
       "cs": 2840005,
       "status": "Storeroom",
       "company": "ADT Security",
@@ -71,7 +71,7 @@ let items = [
     },
     {
       "id": 6,
-      "equipment type": "4G GO",
+      "equipment_type": "4G GO",
       "cs": 2840006,
       "status": "Storeroom",
       "company": "HomeSafe",
@@ -85,7 +85,7 @@ let items = [
     },
     {
       "id": 7,
-      "equipment type": "4G GO",
+      "equipment_type": "4G GO",
       "cs": 2840007,
       "status": "Storeroom",
       "company": "Security Alert",
@@ -99,7 +99,7 @@ let items = [
     },
     {
       "id": 8,
-      "equipment type": "4G GO",
+      "equipment_type": "4G GO",
       "cs": 2840008,
       "status": "Storeroom",
       "company": "ADT Security",
@@ -113,7 +113,7 @@ let items = [
     },
     {
       "id": 9,
-      "equipment type": "4G GO",
+      "equipment_type": "4G GO",
       "cs": 2840009,
       "status": "Storeroom",
       "company": "ADT Security",
@@ -127,7 +127,7 @@ let items = [
     },
     {
       "id": 10,
-      "equipment type": "4G GO",
+      "equipment_type": "4G GO",
       "cs": 2840010,
       "status": "Storeroom",
       "company": "ADT Security",
@@ -141,7 +141,7 @@ let items = [
     },
     {
       "id": 11,
-      "equipment type": "Beacon",
+      "equipment_type": "Beacon",
       "cs": 2870001,
       "status": "Storeroom",
       "company": "HomeSafe",
@@ -155,7 +155,7 @@ let items = [
     },
     {
       "id": 12,
-      "equipment type": "Beacon",
+      "equipment_type": "Beacon",
       "cs": 2870002,
       "status": "Storeroom",
       "company": "Security Alert",
@@ -169,7 +169,7 @@ let items = [
     },
     {
       "id": 13,
-      "equipment type": "Beacon",
+      "equipment_type": "Beacon",
       "cs": 2870003,
       "status": "Storeroom",
       "company": "ADT Security",
@@ -183,7 +183,7 @@ let items = [
     },
     {
       "id": 14,
-      "equipment type": "Beacon",
+      "equipment_type": "Beacon",
       "cs": 2870004,
       "status": "Storeroom",
       "company": "ADT Security",
@@ -197,7 +197,7 @@ let items = [
     },
     {
       "id": 15,
-      "equipment type": "Beacon",
+      "equipment_type": "Beacon",
       "cs": 2870005,
       "status": "Storeroom",
       "company": "ADT Security",
@@ -211,7 +211,7 @@ let items = [
     },
     {
       "id": 16,
-      "equipment type": "Essence",
+      "equipment_type": "Essence",
       "cs": 2880001,
       "status": "Storeroom",
       "company": "HomeSafe",
@@ -225,7 +225,7 @@ let items = [
     },
     {
       "id": 17,
-      "equipment type": "Essence",
+      "equipment_type": "Essence",
       "cs": 2880002,
       "status": "Storeroom",
       "company": "Security Alert",
@@ -239,7 +239,7 @@ let items = [
     },
     {
       "id": 18,
-      "equipment type": "Essence",
+      "equipment_type": "Essence",
       "cs": 2880003,
       "status": "Storeroom",
       "company": "ADT Security",
@@ -253,7 +253,7 @@ let items = [
     },
     {
       "id": 19,
-      "equipment type": "Essence",
+      "equipment_type": "Essence",
       "cs": 2880004,
       "status": "With Tech",
       "company": "ADT Security",
@@ -267,7 +267,7 @@ let items = [
     },
     {
       "id": 20,
-      "equipment type": "Essence",
+      "equipment_type": "Essence",
       "cs": 2880005,
       "status": "Storeroom",
       "company": "ADT Security",
