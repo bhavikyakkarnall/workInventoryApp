@@ -1,3 +1,4 @@
+import Card from "./Display";
 import Masterlist from "./Masterlist";
 import Navigation from "./Navigation";
 
@@ -6,6 +7,7 @@ function Home() {
         <>
             {/* <h1>Home</h1> */}
             <Navigation></Navigation>
+            {/* <Card></Card> */}
             <Masterlist></Masterlist>
         </>
     )
