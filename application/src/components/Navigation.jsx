@@ -6,7 +6,7 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 export default function Navigation() {
     return (
         <>
-            <Navbar expand="lg" className="bg-body-tertiary">
+            <Navbar bg="primary" data-bs-theme="dark">
             <Container>
                 <Navbar.Brand href="#home">ADT Care</Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />

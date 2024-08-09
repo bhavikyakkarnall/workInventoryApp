@@ -75,13 +75,13 @@ export default function Masterlist() {
                     </div>
                 </div> */}
 
-            <div key={item.id}>
-                <Card style={{width: '75%', margin: '30px'}} >
+                <div key={item.id} style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+                <Card style={{ width: '75%', margin: '10px', textAlign: 'center' }} >
                     <Card.Body>
                         <Card.Title><h5>CS: {item.cs}</h5></Card.Title>
                         <Card.Text>
                             <div>
-                                <Stack direction='horizontal' gap={3}>
+                                <Stack direction='horizontal' gap={3} className="justify-content-center">
                                     <div className='p-2'>Serial#{item.serial}</div>
                                     <div className='p-2'>Company: {item.company}</div>
                                     <div className='p-2'>Tech: {item.tech}</div>
@@ -89,14 +89,14 @@ export default function Masterlist() {
                             </div>
 
                             <div>
-                                <Stack direction='horizontal' gap={3}>
+                                <Stack direction='horizontal' gap={3} className="justify-content-center">
                                     <div className='p-2'>Phone#{item.phone}</div>
                                     <div className='p-2'>SIM#{item.sim}</div>
                                     <div className='p-2'>PO#{item.po}</div>
                                 </Stack>
                             </div>
                             <div>
-                                <Stack direction='horizontal' gap={2}>
+                                <Stack direction='horizontal' gap={2} className="justify-content-center">
                                     <div className='p-2'>Config:{item.config}</div>
                                     <div className='p-2'>Firmware:{item.firmware}</div>
                                     <div className='p-2'></div>
@@ -106,7 +106,8 @@ export default function Masterlist() {
                         {/* <Button variant="primary">Go somewhere</Button> */}
                     </Card.Body>
                 </Card>
-            </div>
+                </div>
+
             </>
             
 

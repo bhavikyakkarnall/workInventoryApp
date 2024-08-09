@@ -1,4 +1,3 @@
-import Card from "./Display";
 import Masterlist from "./Masterlist";
 import Navigation from "./Navigation";
 

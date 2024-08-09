@@ -67,15 +67,24 @@ export default function ItemsFilter({ statuses, companies, onFilterChange }) {
 
     return (
         <>
-            <div>
-                <InputGroup className="mb-3">
-                    <Form.Control type="text" ref={csRef} className="games-search-box" value={cs} onChange={(e) => { handleCSSearch(e)}} placeholder="Enter a CS"/>
+            <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '10px', margin: '10px 30px 10px 30px' }}>
+                <InputGroup className="mb-3" style={{ flex: 1 }}>
+                    <Form.Control 
+                        type="text" 
+                        ref={csRef} 
+                        className="games-search-box" 
+                        value={cs} 
+                        onChange={(e) => { handleCSSearch(e)}} 
+                        placeholder="Enter a CS"
+                    />
+                    <button onClick={() => { removeFilters(); }} style={{margin: '0px 0px 0px 5px'}}>Remove Filters</button>
                 </InputGroup>
-                <button onClick={() => { removeFilters(); }}>Remove Filters</button>
+                {/* <button onClick={() => { removeFilters(); }}>Remove Filters</button> */}
             </div>
 
-            <div>
-                Filters:
+            <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+                <h5>Filters:</h5>
+
                 Status
                 <select ref={statusRef}
                 onChange={(e) => {handleStatusChange(e)}}>
@@ -88,21 +97,8 @@ export default function ItemsFilter({ statuses, companies, onFilterChange }) {
                     {companyOptionsJsx}
                 </select>
 
-                {/* <Dropdown as={ButtonGroup}>
-                    <Button variant="secondary">Company</Button>
-                    <Dropdown.Toggle split variant="success" id="dropdown-split-basic" />
-
-                    <Dropdown.Menu>
-                        {companyOptionsJsx.map((option, index) => (
-                            <Dropdown.Item 
-                                key={index} 
-                                onClick={() => handleCompanyChange(option.value)}
-                            >
-                                {option.label}
-                            </Dropdown.Item>
-                        ))}
-                    </Dropdown.Menu>
-                </Dropdown> */}
+                Tech
+                <select>Tech</select>
 
             </div>
 
