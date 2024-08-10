@@ -5,14 +5,18 @@ import Button from 'react-bootstrap/Button';
 import ButtonGroup from 'react-bootstrap/ButtonGroup';
 import Dropdown from 'react-bootstrap/Dropdown';
 
-export default function ItemsFilter({ statuses, companies, onFilterChange }) {
+export default function ItemsFilter({ statuses, companies, techs, pos, onFilterChange }) {
     const [cs, setCS] = useState("");
     const [status, setStatus] = useState("");
     const [company, setCompany] = useState("");
+    const [tech, setTech] = useState("");
+    const [po, setPO] = useState("");
 
     const statusRef = useRef();
     const csRef = useRef();
     const companyRef = useRef();
+    const techRef = useRef();
+    const poRef = useRef();
 
     function handleCSSearch(e) {
         const CSText = e.target.value;
@@ -32,18 +36,35 @@ export default function ItemsFilter({ statuses, companies, onFilterChange }) {
         applyFilter();
     }
 
+    function handleTechChange(e) {
+        const techText = e.target.value;
+        setTech(techText);
+        applyFilter()
+    }
+
+    function handlePOChange(e) {
+        const poText = e.target.value;
+        setTech(poText);
+        applyFilter()
+    }
+
     
     function applyFilter() {
-        onFilterChange(csRef.current.value, statusRef.current.value, companyRef.current.value);
+        onFilterChange(csRef.current.value, statusRef.current.value, companyRef.current.value, techRef.current.value, poRef.current.value);
     }
 
     function resetFilterControls() {
         setCS("");
         setStatus("");
         setCompany("");
+        setTech("");
+        setCompany("");
+        setPO("");
         statusRef.current.value = "";
         csRef.current.value = "";
         companyRef.current.value = "";
+        techRef.current.value = "";
+        poRef.current.value = "";
     }
 
     function removeFilters() {
@@ -64,6 +85,20 @@ export default function ItemsFilter({ statuses, companies, onFilterChange }) {
         )
     })
     companyOptionsJsx.unshift(<option value="">All</option>)
+
+    let techOptionJsx = techs.map(tech => {
+        return (
+            <option value={tech}>{tech}</option>
+        )
+    })
+    techOptionJsx.unshift(<option value="">All</option>)
+
+    let poOptionJsx = pos.map(po => {
+        return (
+            <option value={po}>{po}</option>
+        )
+    })
+    poOptionJsx.unshift(<option value="">All</option>)
 
     return (
         <>
@@ -98,7 +133,16 @@ export default function ItemsFilter({ statuses, companies, onFilterChange }) {
                 </select>
 
                 Tech
-                <select>Tech</select>
+                <select ref={techRef}
+                onChange={(e) => {handleTechChange(e)}}>
+                    {techOptionJsx}
+                </select>
+
+                PO
+                <select ref={poRef}
+                onChange={(e) => {handlePOChange(e)}}>
+                    {poOptionJsx}
+                </select>
 
             </div>
 

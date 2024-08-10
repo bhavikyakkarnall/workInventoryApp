@@ -13,6 +13,8 @@ export default function Masterlist() {
     const [items, setItems] = useState([]);
     const [companies, setCompanies] = useState([]);
     const [statuses, setStatuses] = useState([]);
+    const [techs, setTechs] = useState([]);
+    const [pos, setPOs] = useState([]);
     const [errorMessage, setErrorMessage] = useState("");
 
     useEffect(() => {
@@ -22,6 +24,8 @@ export default function Masterlist() {
                 setAllItems(itemsJsonData);
                 setCompanies(getUniqueCompanyList(itemsJsonData));
                 setStatuses(getUniqueStatusList(itemsJsonData));
+                setTechs(getUniqueTechList(itemsJsonData));
+                setPOs(getUniquePOList(itemsJsonData));
             })
             .catch(error => {
                 setErrorMessage("SERVER DOWN! Unable to connect to server. Please try again later.")
@@ -38,12 +42,24 @@ export default function Masterlist() {
         return [...new Set(allCompanyList)];
     }
 
-    const applyFilter = (cs, status, company) => {
+    const getUniqueTechList = (items) => {
+        const allTechList = items.map(item => item.tech);
+        return [...new Set(allTechList)];
+    }
+
+    const getUniquePOList = (items) => {
+        const allPOList = items.map(item => item.po);
+        return [...new Set(allPOList)];
+    }
+
+    const applyFilter = (cs, status, company, tech, po) => {
         let filteredItems = allItems.filter(item => {
             const csString = item.cs ? item.cs.toString() : '';
             return csString.includes(cs) &&
-                   item.status.toLowerCase().includes(status.toLowerCase()) &&
-                   item.company.toLowerCase().includes(company.toLowerCase());
+                    item.po.toLowerCase().includes(po.toLowerCase()) &&
+                    item.tech.toLowerCase().includes(tech.toLowerCase()) &&
+                    item.status.toLowerCase().includes(status.toLowerCase()) &&
+                    item.company.toLowerCase().includes(company.toLowerCase());
         });
         setItems(filteredItems);
     }
@@ -116,7 +132,7 @@ export default function Masterlist() {
 
     return (
        <>
-            <ItemsFilter companies={companies} statuses={statuses} onFilterChange={applyFilter}></ItemsFilter>
+            <ItemsFilter companies={companies} statuses={statuses} techs={techs} pos={pos} onFilterChange={applyFilter}></ItemsFilter>
            {errorMessage && <div className="alert alert-danger">{errorMessage}</div>}
            <div>
                 {itemsListJsx}
