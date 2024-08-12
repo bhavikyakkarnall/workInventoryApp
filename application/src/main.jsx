@@ -4,10 +4,12 @@ import ReactDOM from 'react-dom/client'
 // import './index.css'
 import Masterlist from './components/Masterlist.jsx'
 import Home from './components/Home.jsx'
+import AppRoute from './routes/AppRoute.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     {/* <Masterlist></Masterlist> */}
-    <Home></Home>
+    {/* <Home></Home> */}
+    <AppRoute/>
   </React.StrictMode>,
 )

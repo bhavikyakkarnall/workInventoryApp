@@ -117,7 +117,7 @@ export default function ItemsFilter({ statuses, companies, techs, pos, onFilterC
                 {/* <button onClick={() => { removeFilters(); }}>Remove Filters</button> */}
             </div>
 
-            <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+            <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '10px', margin: '10px 30px 10px 30px' }}>
                 <h5>Filters:</h5>
 
                 Status

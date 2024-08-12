@@ -4,6 +4,7 @@ import ItemsFilter from './ItemsFilter.jsx';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import Stack from 'react-bootstrap/Stack';
+import Form from 'react-bootstrap/Form';
 
 const itemsService = new ItemsService('http://localhost:3000/items');
 
@@ -98,28 +99,32 @@ export default function Masterlist() {
                         <Card.Text>
                             <div>
                                 <Stack direction='horizontal' gap={3} className="justify-content-center">
-                                    <div className='p-2'>Serial#{item.serial}</div>
-                                    <div className='p-2'>Company: {item.company}</div>
-                                    <div className='p-2'>Tech: {item.tech}</div>
+                                    <div className='p-2'><b>Serial# </b>{item.serial}</div>
+                                    <div className='p-2'><b>Company: </b>{item.company}</div>
+                                    <div className='p-2'><b>Tech: </b>{item.tech}</div>
                                 </Stack>
                             </div>
 
                             <div>
                                 <Stack direction='horizontal' gap={3} className="justify-content-center">
-                                    <div className='p-2'>Phone#{item.phone}</div>
-                                    <div className='p-2'>SIM#{item.sim}</div>
-                                    <div className='p-2'>PO#{item.po}</div>
+                                    <div className='p-2'><b>Phone# </b>{item.phone}</div>
+                                    <div className='p-2'><b>SIM# </b>{item.sim}</div>
+                                    <div className='p-2'><b>PO# </b>{item.po}</div>
                                 </Stack>
                             </div>
                             <div>
                                 <Stack direction='horizontal' gap={2} className="justify-content-center">
-                                    <div className='p-2'>Config:{item.config}</div>
-                                    <div className='p-2'>Firmware:{item.firmware}</div>
-                                    <div className='p-2'></div>
+                                    <div className='p-2'><b>Config: </b>{item.config}</div>
+                                    <div className='p-2'><b>Firmware: </b>{item.firmware}</div>
                                 </Stack>
                             </div>
                         </Card.Text>
-                        {/* <Button variant="primary">Go somewhere</Button> */}
+                        <Stack direction='horizontal' gap={2} className="justify-content-center">
+                            <Form.Control className='p-2' placeholder="Comment" />
+                            <Button className='p-2' variant="primary">Add</Button>
+                            <Button className='p-2' variant="primary">Edit</Button>
+                        </Stack>
+                        
                     </Card.Body>
                 </Card>
                 </div>
