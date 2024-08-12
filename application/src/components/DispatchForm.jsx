@@ -1,21 +1,48 @@
+import React from 'react';
 import Table from 'react-bootstrap/Table';
 import Button from 'react-bootstrap/Button';
 import Col from 'react-bootstrap/Col';
 import Form from 'react-bootstrap/Form';
 import Row from 'react-bootstrap/Row';
-import InputGroup from 'react-bootstrap/InputGroup';
 import Image from 'react-bootstrap/Image';
-import logo from '../assets/ADT Logo.png'
+import logo from '../assets/ADT Logo.png';
+import html2canvas from 'html2canvas';
+import jsPDF from 'jspdf';
 
 export default function DispatchForm() {
+
+    const handleSaveAsPDF = () => {
+        const input = document.getElementById('print');
+        html2canvas(input, { scale: 2 }).then((canvas) => {
+            const imgData = canvas.toDataURL('image/png');
+            const pdf = new jsPDF('p', 'mm', 'a4');
+            const imgWidth = 210;
+            const pageHeight = 297;
+            const imgHeight = (canvas.height * imgWidth) / canvas.width;
+            let heightLeft = imgHeight;
+            let position = 0;
+
+            pdf.addImage(imgData, 'PNG', 0, position, imgWidth, imgHeight);
+            heightLeft -= pageHeight;
+
+            while (heightLeft >= 0) {
+                position = heightLeft - imgHeight;
+                pdf.addPage();
+                pdf.addImage(imgData, 'PNG', 0, position, imgWidth, imgHeight);
+                heightLeft -= pageHeight;
+            }
+            pdf.save('dispatch_form.pdf');
+        });
+    };
+
     return (
         <>
             {/* Printable Screen */}
-            <div style={{margin: '30px'}}>
+            <div id='print' style={{ margin: '30px' }}>
 
                 {/* Logo, Address, Contact */}
                 <div style={{ display: 'flex', justifyContent: 'right', alignItems: 'center', marginRight: '40px', marginBottom: '20px' }}>
-                    <Image src={logo} thumbnail style={{ width: '200px', height: 'auto', border: 'none' }}/>
+                    <Image src={logo} thumbnail style={{ width: '200px', height: 'auto', border: 'none' }} />
                 </div>
 
                 {/* Contact Details */}
@@ -145,19 +172,18 @@ export default function DispatchForm() {
                     </Table>
                 </div>
 
-                {/* Submit and Clear */}
-                <div style={{ margin: '10px' }}>
-                    <Button variant="primary" type="submit">
-                        Submit
-                    </Button>
-
-                    <Button variant="primary" type="submit" style={{ marginLeft: '10px' }}>
-                        Clear
-                    </Button>
-                </div>
-
             </div>
 
+            {/* Submit and Clear */}
+            <div style={{ margin: '10px' }}>
+                <Button variant="primary" onClick={handleSaveAsPDF}>
+                    Save as PDF
+                </Button>
+
+                <Button variant="primary" type="submit" style={{ marginLeft: '10px' }}>
+                    Clear
+                </Button>
+            </div>
         </>
-    )
+    );
 }
