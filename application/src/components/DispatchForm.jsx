@@ -13,7 +13,7 @@ export default function DispatchForm() {
 
     const handleSaveAsPDF = () => {
         const input = document.getElementById('print');
-        html2canvas(input, { scale: 2 }).then((canvas) => {
+        html2canvas(input, { scale: 3 }).then((canvas) => {
             const imgData = canvas.toDataURL('image/png');
             const pdf = new jsPDF('p', 'mm', 'a4');
             const imgWidth = 210;
@@ -35,80 +35,74 @@ export default function DispatchForm() {
         });
     };
 
+
     return (
         <>
             {/* Printable Screen */}
-            <div id='print' style={{ margin: '30px' }}>
+            <div style={{ margin: '30px' }} id="print">
 
                 {/* Logo, Address, Contact */}
-                <div style={{ display: 'flex', justifyContent: 'right', alignItems: 'center', marginRight: '40px', marginBottom: '20px' }}>
+                <div className="d-flex justify-content-end align-items-center mb-4">
                     <Image src={logo} thumbnail style={{ width: '200px', height: 'auto', border: 'none' }} />
                 </div>
 
                 {/* Contact Details */}
-                <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-                    <Form style={{ width: '100%', margin: '10px', textAlign: 'center' }}>
-                        <Row>
-                            <Col>
-                                <Form>
-                                    <Form.Group as={Row} className="mb-3" controlId="formHorizontalEmail">
-                                        <Form.Label column sm={1}>
-                                            Name
-                                        </Form.Label>
-                                        <Col>
-                                            <Form.Control type="email" placeholder="Email" />
-                                        </Col>
-                                    </Form.Group>
+                <Form className="mb-4">
+                    <Row>
+                        <Col md={6}>
+                            <Form.Group as={Row} className="mb-3">
+                                <Form.Label column sm={3}>
+                                    Name
+                                </Form.Label>
+                                <Col sm={9}>
+                                    <Form.Control type="text" placeholder="Name" />
+                                </Col>
+                            </Form.Group>
 
-                                    <Form.Group as={Row} className="mb-3" controlId="formHorizontalPassword">
-                                        <Form.Label column sm={1}>
-                                            Company
-                                        </Form.Label>
-                                        <Col>
-                                            <Form.Control type="password" placeholder="Password" />
-                                        </Col>
-                                    </Form.Group>
+                            <Form.Group as={Row} className="mb-3">
+                                <Form.Label column sm={3}>
+                                    Company
+                                </Form.Label>
+                                <Col sm={9}>
+                                    <Form.Control type="text" placeholder="Company" />
+                                </Col>
+                            </Form.Group>
 
-                                    <Form.Group as={Row} className="mb-3" controlId="formHorizontalPassword">
-                                        <Form.Label column sm={1}>
-                                            Address
-                                        </Form.Label>
-                                        <Col>
-                                            <Form.Control as="textarea" aria-label="With textarea" />
-                                        </Col>
-                                    </Form.Group>
+                            <Form.Group as={Row} className="mb-3">
+                                <Form.Label column sm={3}>
+                                    Address
+                                </Form.Label>
+                                <Col sm={9}>
+                                    <Form.Control as="textarea" placeholder="Address" />
+                                </Col>
+                            </Form.Group>
+                        </Col>
 
-                                </Form>
-                            </Col>
-                            <Col>
-                                <Form>
-                                    <Form.Group as={Row} className="mb-3" controlId="formHorizontalEmail">
-                                        <Form.Label column sm={1}>
-                                            Order#
-                                        </Form.Label>
-                                        <Col>
-                                            <Form.Control type="email" placeholder="Email" />
-                                        </Col>
-                                    </Form.Group>
+                        <Col md={6}>
+                            <Form.Group as={Row} className="mb-3">
+                                <Form.Label column sm={3}>
+                                    Order#
+                                </Form.Label>
+                                <Col sm={9}>
+                                    <Form.Control type="text" placeholder="Order#" />
+                                </Col>
+                            </Form.Group>
 
-                                    <Form.Group as={Row} className="mb-3" controlId="formHorizontalPassword">
-                                        <Form.Label column sm={1}>
-                                            Tracking#
-                                        </Form.Label>
-                                        <Col>
-                                            <Form.Control type="password" placeholder="Password" />
-                                        </Col>
-                                    </Form.Group>
-                                </Form>
-                            </Col>
-                        </Row>
-                    </Form>
-
-                </div>
+                            <Form.Group as={Row} className="mb-3">
+                                <Form.Label column sm={3}>
+                                    Tracking#
+                                </Form.Label>
+                                <Col sm={9}>
+                                    <Form.Control type="text" placeholder="Tracking#" />
+                                </Col>
+                            </Form.Group>
+                        </Col>
+                    </Row>
+                </Form>
 
                 {/* Transmittal Equipment Details */}
-                <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-                    <Table style={{ width: '90%', margin: '10px', textAlign: 'center' }} striped bordered hover>
+                <div className="table-responsive">
+                    <Table striped bordered hover>
                         <thead>
                             <tr>
                                 <th>#</th>
@@ -123,55 +117,54 @@ export default function DispatchForm() {
                             <tr>
                                 <td>1</td>
                                 <td>2870001</td>
-                                <td>Mark</td>
-                                <td>Otto</td>
-                                <td>@mdo</td>
-                                <td>+64279873820</td>
+                                <td>Beacon</td>
+                                <td>1</td>
+                                <td>8623832475628</td>
+                                <td>+64279473820</td>
                             </tr>
                             <tr>
                                 <td>2</td>
                                 <td>2870001</td>
-                                <td>Mark</td>
-                                <td>Otto</td>
-                                <td>@mdo</td>
-                                <td>+64279873820</td>
+                                <td>Beacon</td>
+                                <td>1</td>
+                                <td>8623832475628</td>
+                                <td>+64279473820</td>
                             </tr>
                             <tr>
                                 <td>3</td>
                                 <td>2870001</td>
-                                <td>Mark</td>
-                                <td>Otto</td>
-                                <td>@mdo</td>
-                                <td>+64279873820</td>
+                                <td>Beacon</td>
+                                <td>1</td>
+                                <td>8623832475628</td>
+                                <td>+64279473820</td>
                             </tr>
                             <tr>
                                 <td>4</td>
                                 <td>2870001</td>
-                                <td>Mark</td>
-                                <td>Otto</td>
-                                <td>@mdo</td>
-                                <td>+64279873820</td>
+                                <td>Beacon</td>
+                                <td>1</td>
+                                <td>8623832475628</td>
+                                <td>+64279473820</td>
                             </tr>
                             <tr>
                                 <td>5</td>
                                 <td>2870001</td>
-                                <td>Mark</td>
-                                <td>Otto</td>
-                                <td>@mdo</td>
-                                <td>+64279873820</td>
+                                <td>Beacon</td>
+                                <td>1</td>
+                                <td>8623832475628</td>
+                                <td>+64279473820</td>
                             </tr>
                             <tr>
                                 <td>6</td>
                                 <td>2870001</td>
-                                <td>Mark</td>
-                                <td>Otto</td>
-                                <td>@mdo</td>
-                                <td>+64279873820</td>
+                                <td>Beacon</td>
+                                <td>1</td>
+                                <td>8623832475628</td>
+                                <td>+64279473820</td>
                             </tr>
                         </tbody>
                     </Table>
                 </div>
-
             </div>
 
             {/* Submit and Clear */}
