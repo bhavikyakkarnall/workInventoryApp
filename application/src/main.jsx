@@ -8,8 +8,6 @@ import AppRoute from './routes/AppRoute.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    {/* <Masterlist></Masterlist> */}
-    {/* <Home></Home> */}
     <AppRoute/>
   </React.StrictMode>,
 )

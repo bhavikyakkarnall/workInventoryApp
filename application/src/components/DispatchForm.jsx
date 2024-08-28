@@ -116,7 +116,7 @@ export default function DispatchForm() {
                         <tbody>
                             <tr>
                                 <td>1</td>
-                                <td>2870001</td>
+                                <td><Form.Control type="text" placeholder="CS#" /></td>
                                 <td>Beacon</td>
                                 <td>1</td>
                                 <td>8623832475628</td>
@@ -124,7 +124,7 @@ export default function DispatchForm() {
                             </tr>
                             <tr>
                                 <td>2</td>
-                                <td>2870001</td>
+                                <td><Form.Control type="text" placeholder="CS#" /></td>
                                 <td>Beacon</td>
                                 <td>1</td>
                                 <td>8623832475628</td>
@@ -132,7 +132,7 @@ export default function DispatchForm() {
                             </tr>
                             <tr>
                                 <td>3</td>
-                                <td>2870001</td>
+                                <td><Form.Control type="text" placeholder="CS#" /></td>
                                 <td>Beacon</td>
                                 <td>1</td>
                                 <td>8623832475628</td>
@@ -140,7 +140,7 @@ export default function DispatchForm() {
                             </tr>
                             <tr>
                                 <td>4</td>
-                                <td>2870001</td>
+                                <td><Form.Control type="text" placeholder="CS#" /></td>
                                 <td>Beacon</td>
                                 <td>1</td>
                                 <td>8623832475628</td>
@@ -148,19 +148,14 @@ export default function DispatchForm() {
                             </tr>
                             <tr>
                                 <td>5</td>
-                                <td>2870001</td>
+                                <td><Form.Control type="text" placeholder="CS#" /></td>
                                 <td>Beacon</td>
                                 <td>1</td>
                                 <td>8623832475628</td>
                                 <td>+64279473820</td>
                             </tr>
                             <tr>
-                                <td>6</td>
-                                <td>2870001</td>
-                                <td>Beacon</td>
-                                <td>1</td>
-                                <td>8623832475628</td>
-                                <td>+64279473820</td>
+                                <td colSpan={"6"}>Add row</td>
                             </tr>
                         </tbody>
                     </Table>
