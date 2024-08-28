@@ -160,6 +160,10 @@ export default function DispatchForm() {
                         </tbody>
                     </Table>
                 </div>
+
+                <div>
+                    <Form.Control as="textarea" placeholder="Comment..." />
+                </div>
             </div>
 
             {/* Submit and Clear */}

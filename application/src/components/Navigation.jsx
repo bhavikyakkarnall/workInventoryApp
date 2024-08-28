@@ -17,6 +17,7 @@ export default function Navigation() {
                     <Nav.Link as={Link} to="/mastelist">Masterlist</Nav.Link>
                     <Nav.Link as={Link} to="/DispatchForm">DispatchForm</Nav.Link>
                     <Nav.Link as={Link} to="/StockOrder">Order</Nav.Link>
+                    <Nav.Link as={Link} to="/Returns">Returns</Nav.Link>
                 </Nav>
                 </Navbar.Collapse>
             </Container>
