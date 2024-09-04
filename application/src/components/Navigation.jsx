@@ -14,10 +14,11 @@ export default function Navigation() {
                 <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="me-auto">
                     <Nav.Link as={Link} to="/">Home</Nav.Link>
-                    <Nav.Link as={Link} to="/mastelist">Masterlist</Nav.Link>
+                    <Nav.Link as={Link} to="/Inventory">Inventory</Nav.Link>
                     <Nav.Link as={Link} to="/DispatchForm">DispatchForm</Nav.Link>
                     <Nav.Link as={Link} to="/StockOrder">Order</Nav.Link>
                     <Nav.Link as={Link} to="/Returns">Returns</Nav.Link>
+                    <Nav.Link as={Link} to="/Orders">Orders</Nav.Link>
                 </Nav>
                 </Navbar.Collapse>
             </Container>

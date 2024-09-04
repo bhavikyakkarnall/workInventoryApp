@@ -48,61 +48,61 @@ export default function DispatchForm() {
 
                 {/* Contact Details */}
                 <Form className="mb-6X">
-    <Row className="d-flex align-items-center">
-        <Col md={5} className="d-flex flex-column">
-            <Form.Group as={Row} className="mb-3">
-                <Form.Label column sm={3}>
-                    Name
-                </Form.Label>
-                <Col sm={9}>
-                    <Form.Control type="text" placeholder="Name" />
-                </Col>
-            </Form.Group>
+                    <Row className="d-flex align-items-center">
+                        <Col md={5} className="d-flex flex-column">
+                            <Form.Group as={Row} className="mb-3">
+                                <Form.Label column sm={3}>
+                                    Name
+                                </Form.Label>
+                                <Col sm={9}>
+                                    <Form.Control type="text" placeholder="Name" />
+                                </Col>
+                            </Form.Group>
 
-            <Form.Group as={Row} className="mb-3">
-                <Form.Label column sm={3}>
-                    Company
-                </Form.Label>
-                <Col sm={9}>
-                    <Form.Control type="text" placeholder="Company" />
-                </Col>
-            </Form.Group>
+                            <Form.Group as={Row} className="mb-3">
+                                <Form.Label column sm={3}>
+                                    Company
+                                </Form.Label>
+                                <Col sm={9}>
+                                    <Form.Control type="text" placeholder="Company" />
+                                </Col>
+                            </Form.Group>
 
-            <Form.Group as={Row} className="mb-3">
-                <Form.Label column sm={3}>
-                    Address
-                </Form.Label>
-                <Col sm={9}>
-                    <Form.Control as="textarea" placeholder="Address" />
-                </Col>
-            </Form.Group>
-        </Col>
+                            <Form.Group as={Row} className="mb-3">
+                                <Form.Label column sm={3}>
+                                    Address
+                                </Form.Label>
+                                <Col sm={9}>
+                                    <Form.Control as="textarea" placeholder="Address" />
+                                </Col>
+                            </Form.Group>
+                        </Col>
 
-        <Col md={4} className="d-flex flex-column">
-            <Form.Group as={Row} className="mb-3">
-                <Form.Label column sm={3}>
-                    Order#
-                </Form.Label>
-                <Col sm={9}>
-                    <Form.Control type="text" placeholder="Order#" />
-                </Col>
-            </Form.Group>
+                        <Col md={4} className="d-flex flex-column">
+                            <Form.Group as={Row} className="mb-3">
+                                <Form.Label column sm={3}>
+                                    Order#
+                                </Form.Label>
+                                <Col sm={9}>
+                                    <Form.Control type="text" placeholder="Order#" />
+                                </Col>
+                            </Form.Group>
 
-            <Form.Group as={Row} className="mb-3">
-                <Form.Label column sm={3}>
-                    Tracking#
-                </Form.Label>
-                <Col sm={9}>
-                    <Form.Control type="text" placeholder="Tracking#" />
-                </Col>
-            </Form.Group>
-        </Col>
+                            <Form.Group as={Row} className="mb-3">
+                                <Form.Label column sm={3}>
+                                    Tracking#
+                                </Form.Label>
+                                <Col sm={9}>
+                                    <Form.Control type="text" placeholder="Tracking#" />
+                                </Col>
+                            </Form.Group>
+                        </Col>
 
-        <Col md={3} className="d-flex justify-content-center">
-            <Image src={logo} thumbnail style={{ width: '200px', height: 'auto', border: 'none' }} />
-        </Col>
-    </Row>
-</Form>
+                        <Col md={3} className="d-flex justify-content-center">
+                            <Image src={logo} thumbnail style={{ width: '200px', height: 'auto', border: 'none' }} />
+                        </Col>
+                    </Row>
+                </Form>
 
                 {/* Transmittal Equipment Details */}
                 <div className="table-responsive">
